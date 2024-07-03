@@ -24,7 +24,7 @@ const YakMap = () => {
 			.attr("cy", 250)
 			.attr("r", 50)
 			.attr('x', 12)
-			.style("fill", "blue");
+			.style("fill", "steelblue");
 	}
 	
 	return (
