@@ -1,6 +1,11 @@
 'use client'
 import * as d3 from "d3";
 import {useEffect, useRef} from "react";
+import {nodes} from "~/mock/nodes";
+
+const width = 928;
+const height = 680;
+const color = d3.scaleOrdinal(d3.schemeCategory10);
 
 const YakMap = () => {
 	const yakRef = useRef(null);
@@ -13,18 +18,30 @@ const YakMap = () => {
 	}, []);
 	
 	const createD3 = () => {
-		console.log('create')
-		const svg = d3.select(yakRef.current).append("svg");
-		svg.attr("width", 500)
-			.attr("height", 500)
-			.style("background-color", "gray");
+		const simulation = d3.forceSimulation(nodes)
+			.force("charge", d3.forceManyBody())
+			.force("center", d3.forceCenter())
+			.on('tick', () => {
+				node.attr("cx", d => d.x)
+			} )
 		
-		svg.append("circle")
-			.attr("cx", 250)
-			.attr("cy", 250)
-			.attr("r", 50)
-			.attr('x', 12)
-			.style("fill", "steelblue");
+		const svg = d3.create("svg")
+			.attr("width", width)
+			.attr("height", height)
+			.attr("viewBox", [-width / 2, -height / 2, width, height])
+			.attr("style", "max-width: 100%; height: auto;");
+
+		const node = svg.append("g")
+			.attr("stroke", "#fff")
+			.attr("stroke-width", 1.5)
+			.selectAll("circle")
+			.data(nodes)
+			.join("circle")
+			.attr("r", 10)
+			.attr("fill", d => 'red');
+		
+		// @ts-ignore
+		d3.select(yakRef.current)?.node()!.append(svg.node());
 	}
 	
 	return (
