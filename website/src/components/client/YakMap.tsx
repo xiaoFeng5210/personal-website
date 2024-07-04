@@ -1,7 +1,7 @@
 'use client'
 import * as d3 from "d3";
 import {useEffect, useRef} from "react";
-import {nodes} from "~/mock/nodes";
+import {links, nodes} from "~/mock/nodes";
 
 const width = 928;
 const height = 680;
@@ -21,32 +21,46 @@ const YakMap = () => {
 		const simulation = d3.forceSimulation(nodes)
 			.force("charge", d3.forceManyBody())
 			.force("center", d3.forceCenter())
+			.force("x", d3.forceX())
+			.force("y", d3.forceY())
 			.on('tick', () => {
+				link
+					.attr("x1", d => d.source)
+					.attr("y1", d => d.source)
+					.attr("x2", d => d.target)
+					.attr("y2", d => d.target);
+				
 				node.attr("cx", d => d.x)
-			} )
+					.attr("cy", d => d.y);
+			});
 		
-		const svg = d3.create("svg")
+		const svg = d3.select(yakRef.current)
 			.attr("width", width)
 			.attr("height", height)
 			.attr("viewBox", [-width / 2, -height / 2, width, height])
 			.attr("style", "max-width: 100%; height: auto;");
 
+		const link = svg.append("g")
+			.attr("stroke", "green")
+			.attr("stroke-opacity", 0.8)
+			.selectAll("line")
+			.data(links)
+			.join("line")
+			.attr("stroke-width", d => d.value);
+
 		const node = svg.append("g")
-			.attr("stroke", "#fff")
-			.attr("stroke-width", 1.5)
+			.attr("stroke", "blue")
+			.attr("stroke-width", 2.5)
 			.selectAll("circle")
 			.data(nodes)
 			.join("circle")
 			.attr("r", 10)
 			.attr("fill", d => 'red');
-		
-		// @ts-ignore
-		d3.select(yakRef.current)?.node()!.append(svg.node());
 	}
 	
 	return (
-		<div ref={yakRef} id="yak_map_id" className="w-screen h-screen flex justify-center items-center">
-		</div>
+		<svg ref={yakRef} id="yak_map_id" className="w-screen h-screen flex justify-center items-center">
+		</svg>
 	);
 }
 
