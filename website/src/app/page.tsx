@@ -1,4 +1,3 @@
-import Image from "next/image";
 import YakLogo from "~/components/client/yak";
 import YakMap from "~/components/client/YakMap";
 

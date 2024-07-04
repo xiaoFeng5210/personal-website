@@ -21,14 +21,13 @@ const YakMap = () => {
 		const simulation = d3.forceSimulation(nodes)
 			.force("charge", d3.forceManyBody())
 			.force("center", d3.forceCenter())
-			.force("x", d3.forceX())
-			.force("y", d3.forceY())
+			.force("link", d3.forceLink(links).strength(0.5).distance(50).iterations(10))
 			.on('tick', () => {
 				link
-					.attr("x1", d => d.source)
-					.attr("y1", d => d.source)
-					.attr("x2", d => d.target)
-					.attr("y2", d => d.target);
+					.attr("x1", d => d.source.x)
+					.attr("y1", d => d.source.y)
+					.attr("x2", d => d.target.x)
+					.attr("y2", d => d.target.y);
 				
 				node.attr("cx", d => d.x)
 					.attr("cy", d => d.y);
@@ -41,9 +40,9 @@ const YakMap = () => {
 			.attr("style", "max-width: 100%; height: auto;");
 
 		const link = svg.append("g")
-			.attr("stroke", "green")
-			.attr("stroke-opacity", 0.8)
-			.selectAll("line")
+			.attr("stroke", "#9D9DA0")
+			.attr("stroke-opacity", 0.6)
+			.selectAll()
 			.data(links)
 			.join("line")
 			.attr("stroke-width", d => d.value);

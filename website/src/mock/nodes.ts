@@ -33,9 +33,4 @@ export const links = [
 		target: 2,
 		value: 2
 	},
-	{
-		source: 2,
-		target: 0,
-		value: 2
-	}
 ]
