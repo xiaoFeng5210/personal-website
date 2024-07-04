@@ -27,7 +27,7 @@ const YakMap = () => {
 					.attr("x1", d => d.source.x)
 					.attr("y1", d => d.source.y)
 					.attr("x2", d => d.target.x)
-					.attr("y2", d => d.target.y);
+					.attr("y2", d => d.target.y)
 				
 				node.attr("cx", d => d.x)
 					.attr("cy", d => d.y);
@@ -41,20 +41,22 @@ const YakMap = () => {
 
 		const link = svg.append("g")
 			.attr("stroke", "#9D9DA0")
-			.attr("stroke-opacity", 0.6)
+			.attr("stroke-opacity", 0.3)
 			.selectAll()
 			.data(links)
 			.join("line")
 			.attr("stroke-width", d => d.value);
 
 		const node = svg.append("g")
-			.attr("stroke", "blue")
-			.attr("stroke-width", 2.5)
+			.attr("stroke", "#fff")
+			.attr("stroke-width", 0)
 			.selectAll("circle")
 			.data(nodes)
 			.join("circle")
 			.attr("r", 10)
-			.attr("fill", d => 'red');
+			.attr("fill", d => d.color);
+		
+		// TODO: node我希望增加文字显示
 	}
 	
 	return (

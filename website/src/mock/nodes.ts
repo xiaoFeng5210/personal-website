@@ -1,3 +1,5 @@
+import {nodeTheme} from "~/config/theme";
+
 export const nodes = [
 	{
 		id: 0,
@@ -5,6 +7,7 @@ export const nodes = [
 		y: 10,
 		vx: 0,
 		vy: 0,
+		color: nodeTheme.mainColor[4]
 	},
 	{
 		id: 1,
@@ -12,6 +15,7 @@ export const nodes = [
 		y: 30,
 		vx: 0,
 		vy: 0,
+		color: nodeTheme.mainColor[0]
 	},
 	{
 		id: 2,
@@ -19,6 +23,7 @@ export const nodes = [
 		y: 200,
 		vx: 0,
 		vy: 0,
+		color: nodeTheme.mainColor[0]
 	}
 ]
 
