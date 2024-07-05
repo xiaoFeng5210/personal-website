@@ -3,8 +3,8 @@ import {nodeTheme} from "~/config/theme";
 export const nodes = [
 	{
 		id: 0,
-		x: 150,
-		y: 10,
+		x: 200,
+		y: 100,
 		vx: 0,
 		vy: 0,
 		color: nodeTheme.mainColor[4],
@@ -12,17 +12,17 @@ export const nodes = [
 	},
 	{
 		id: 1,
-		x: 30,
-		y: 30,
+		x: 230,
+		y: 130,
 		vx: 0,
 		vy: 0,
 		color: nodeTheme.mainColor[0],
-		text: 'Vue'
+		text: 'Vue3'
 	},
 	{
 		id: 2,
-		x: 50,
-		y: 40,
+		x: 250,
+		y: 140,
 		vx: 0,
 		vy: 0,
 		color: nodeTheme.mainColor[0],
@@ -37,7 +37,7 @@ export const links = [
 		value: 2
 	},
 	{
-		source: 1,
+		source: 0,
 		target: 2,
 		value: 2
 	},
