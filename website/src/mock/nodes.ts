@@ -7,7 +7,8 @@ export const nodes = [
 		y: 10,
 		vx: 0,
 		vy: 0,
-		color: nodeTheme.mainColor[4]
+		color: nodeTheme.mainColor[4],
+		text: 'Javascript'
 	},
 	{
 		id: 1,
@@ -15,7 +16,8 @@ export const nodes = [
 		y: 30,
 		vx: 0,
 		vy: 0,
-		color: nodeTheme.mainColor[0]
+		color: nodeTheme.mainColor[0],
+		text: 'Vue'
 	},
 	{
 		id: 2,
@@ -23,7 +25,8 @@ export const nodes = [
 		y: 200,
 		vx: 0,
 		vy: 0,
-		color: nodeTheme.mainColor[0]
+		color: nodeTheme.mainColor[0],
+		text: 'React'
 	}
 ]
 

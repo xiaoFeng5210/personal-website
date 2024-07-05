@@ -55,8 +55,22 @@ const YakMap = () => {
 			.join("circle")
 			.attr("r", 10)
 			.attr("fill", d => d.color);
+		
 		// TODO: node我希望增加文字显示
+		const labels = svg.append("g")
+			.selectAll("text")
+			.data(nodes)
+			.join("text")
+			.attr("dy", ".35em")
+			.attr("x", d => d.x)
+			.attr("y", d => d.y)
+			.attr("text-anchor", "middle")
+			.attr("font-size", "10px")
+			.attr("fill", "#000")
+			.text(d => d.text); // Assuming each node has a 'name' property
 	}
+	
+	
 	
 	return (
 		<svg ref={yakRef} id="yak_map_id" className="w-screen h-screen flex justify-center items-center">
