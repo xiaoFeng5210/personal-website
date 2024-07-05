@@ -24,10 +24,10 @@ const YakMap = () => {
 			.force("link", d3.forceLink(links).strength(0.5).distance(50).iterations(10))
 			.on('tick', () => {
 				link
-					.attr("x1", d => d.source.x)
-					.attr("y1", d => d.source.y)
-					.attr("x2", d => d.target.x)
-					.attr("y2", d => d.target.y)
+					.attr("x1", d => (d.source as any).x)
+					.attr("y1", d => (d.source as any).y)
+					.attr("x2", d => (d.target as any).x)
+					.attr("y2", d => (d.target as any).y)
 				
 				node.attr("cx", d => d.x)
 					.attr("cy", d => d.y);
@@ -55,7 +55,6 @@ const YakMap = () => {
 			.join("circle")
 			.attr("r", 10)
 			.attr("fill", d => d.color);
-		
 		// TODO: node我希望增加文字显示
 	}
 	
