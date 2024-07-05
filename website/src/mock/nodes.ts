@@ -3,12 +3,12 @@ import {nodeTheme} from "~/config/theme";
 export const nodes = [
 	{
 		id: 0,
-		x: 10,
+		x: 150,
 		y: 10,
 		vx: 0,
 		vy: 0,
 		color: nodeTheme.mainColor[4],
-		text: 'Javascript'
+		text: 'Web框架'
 	},
 	{
 		id: 1,
@@ -21,8 +21,8 @@ export const nodes = [
 	},
 	{
 		id: 2,
-		x: 100,
-		y: 200,
+		x: 50,
+		y: 40,
 		vx: 0,
 		vy: 0,
 		color: nodeTheme.mainColor[0],
