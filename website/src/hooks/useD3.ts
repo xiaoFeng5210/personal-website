@@ -73,9 +73,12 @@ export const useD3 = () => {
 
 
 			// Optional: Add drag behavior for nodes
+			// @ts-ignore
 			node.call(d3.drag()
 				.on("start", dragstarted)
+				// @ts-ignore
 				.on("drag", dragged)
+				// @ts-ignore
 				.on("end", dragended));
 		}
 		return () => {
