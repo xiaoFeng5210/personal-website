@@ -1,4 +1,5 @@
-FROM node:18-alpine AS base
+#FROM node:18-alpine AS base
+FROM registry.cn-shanghai.aliyuncs.com/node_service_space/node_18_alpha:0.0.2 AS base
 
 # Install dependencies only when needed
 FROM base AS deps
