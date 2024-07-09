@@ -4,8 +4,8 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm config set -g registry https://registry.npmmirror.com/
-ENV PNPM_REGISTRY=https://registry.npmmirror.com/
+#RUN npm config set -g registry https://registry.npmmirror.com/
+#ENV PNPM_REGISTRY=https://registry.npmmirror.com/
 
 RUN npm i -g pnpm
 
