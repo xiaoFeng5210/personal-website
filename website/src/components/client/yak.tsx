@@ -9,7 +9,7 @@ const YakLogo: FC = () => {
 				<a className="text-2xl hover:underline cursor-pointer" target="_blank" href="https://github.com/xiaoFeng5210/personal-website/tree/main/website">Yak Map</a>
 			</div>
 		</div>
-	)
+	);
 }
 
 export default YakLogo;

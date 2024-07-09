@@ -1,5 +1,5 @@
 #FROM node:18-alpine as builder
-FROM registry.cn-shanghai.aliyuncs.com/node_service_space/node_18_alpha:0.0.2 AS builder
+FROM registry.cn-shanghai.aliyuncs.com/node_service_space/node_18_alpha:0.0.3 AS builder
 WORKDIR /app
 
 COPY package*.json ./
