@@ -7,7 +7,7 @@ COPY package*.json ./
 #RUN npm config set -g registry https://registry.npmmirror.com/
 #ENV PNPM_REGISTRY=https://registry.npmmirror.com/
 
-RUN npm install -g pnpm
+RUN npm install -g pnpm@8.11.0
 
 COPY . .
 
