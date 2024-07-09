@@ -7,7 +7,7 @@ COPY package*.json ./
 #RUN npm config set -g registry https://registry.npmmirror.com/
 #ENV PNPM_REGISTRY=https://registry.npmmirror.com/
 
-RUN npm install -g pnpm
+RUN npm install -g pnpm --verbose
 
 COPY . .
 
@@ -16,4 +16,4 @@ RUN pnpm run build
 
 EXPOSE 3000
 
-CMD ["pnpm", "start"]  
+CMD ["pnpm", "start"]
