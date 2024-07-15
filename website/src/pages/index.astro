@@ -3,14 +3,14 @@ import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
-import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+// import Features from '~/components/widgets/Features.astro';
+// import Features2 from '~/components/widgets/Features2.astro';
+// import Steps from '~/components/widgets/Steps.astro';
+// import Content from '~/components/widgets/Content.astro';
+// import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+// import FAQs from '~/components/widgets/FAQs.astro';
+// import Stats from '~/components/widgets/Stats.astro';
+// import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
   title: 'Hi! 欢迎来到我的世界',
@@ -25,12 +25,12 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
+        text: 'Github',
+        href: 'https://github.com/xiaoFeng5210',
         target: '_blank',
-        icon: 'tabler:download',
+        icon: 'tabler:brand-github',
       },
-      { text: 'Learn more', href: '#features' },
+      { text: '知识库', href: 'https://www.yuque.com/noth1ng', target: '_blank', icon: 'ant-design:yuque-filled' },
     ]}
     image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
   >
@@ -41,8 +41,7 @@ const metadata = {
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        
-        我是一名前端开发，热爱开源，琢磨技术，业余生活中喜欢<span class="font-semibold">摄影📷</span>，
+        我是一名前端开发，热爱开源，专心技术，业余生活中喜欢<span class="font-semibold">摄影📷</span>，
         <span class="font-semibold">游戏🎮</span>，
         <span class="font-semibold">读书📖</span>。
       </span
@@ -50,5 +49,4 @@ const metadata = {
       <span class="block mb-1 sm:hidden font-bold text-blue-600"></span>
     </Fragment>
   </Hero>
-  <Note />
 </Layout>

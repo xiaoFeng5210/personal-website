@@ -12,7 +12,7 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import { getPermalink } from '~/utils/permalinks';
 
 const metadata = {
-  title: 'Personal Homepage Demo',
+  title: '个人介绍',
 };
 ---
 
@@ -20,14 +20,12 @@ const metadata = {
   <!-- Hero2 Widget ******************* -->
   <Hero
     id="hero"
-    title="Sarah Johnson"
-    tagline="Personal Web Demo"
+    title="张庆风"
+    tagline=""
     actions={[{ variant: 'primary', text: 'Hire me', href: getPermalink('/contact#form') }]}
   >
     <Fragment slot="subtitle">
-      I'm a Graphic Designer passionate about crafting visual stories. <br /> With 5 years of experience and a degree from
-      New York University's School of Design. I infuse vitality into brands and designs, transforming concepts into captivating
-      realities.
+      不止于前端，不断去进步，创造，学习。 <br />
     </Fragment>
   </Hero>
 
@@ -38,27 +36,17 @@ const metadata = {
     columns={3}
     items={[
       {
-        icon: 'tabler:brand-dribbble',
+        icon: 'tabler:phone-call',
         callToAction: {
           target: '_blank',
-          text: 'Dribbble',
-          href: '#',
+          text: '15105215616',
         },
       },
       {
-        icon: 'tabler:brand-behance',
+        icon: 'tabler:mail',
         callToAction: {
           target: '_blank',
-          text: 'Behance',
-          href: '#',
-        },
-      },
-      {
-        icon: 'tabler:brand-pinterest',
-        callToAction: {
-          target: '_blank',
-          text: 'Pinterest',
-          href: '#',
+          text: 'aurora.coder.zqf@gmail.com',
         },
       },
     ]}
@@ -71,16 +59,17 @@ const metadata = {
     <Fragment slot="content">
       <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h2>
       <p>
-        Welcome to my creative journey. My work is a testament to my commitment to bringing ideas to life, where each
-        pixel becomes a brushstroke in the canvas of imagination.
+        我是一名有5年工作经验的前端，热爱开源，基础扎实，react18 vue3框架以及周边生态驾轻就熟。同时关注设计模式，函数组合，单元测试，喜欢编写typescript。为了写好代码不断努力。
+
       </p>
       <br />
       <p>
-        I find inspiration in the world around me, whether through the pages of a captivating novel, the intricate
-        details of typography, or the vibrant hues of nature during my outdoor escapades.
+        在canvas，threejs，可视化方向研究较多，同时还做了很多动画相关（gsap,react-motion),擅长css动效。 熟悉node相关技术，深入理解了事件循环等底层原理，基础api掌握扎实，并写有开源项目。了解nestjs等web框架
+        在多端方面做的项目较多，taro最佳实践，reactnative都有涉及
+        自己的目标是不止是前端，目前在学习后端相关，数据库，语言（rust，python）和web框架相关（node相关web框架）
       </p>
       <br />
-      <p>If you're curious to dive deeper into my work, you can follow me:</p>
+      <p>如果你想更深入的了解我的工作和技能～欢迎联系我:</p>
     </Fragment>
 
     <Fragment slot="bg">
@@ -90,43 +79,43 @@ const metadata = {
 
   <!-- Steps Widget ****************** -->
 
-  <Steps
-    id="resume"
-    title="Work experience"
-    items={[
-      {
-        title:
-          'Graphic Designer <br /> <span class="font-normal">ABC Design Studio, New York, NY</span> <br /> <span class="text-sm font-normal">2021 - Present</span>',
-        description: `Collaborate with clients to understand design requirements and objectives. <br /> Develop branding solutions, including logos, color palettes, and brand guidelines. <br /> Design marketing materials such as brochures, posters, and digital assets. <br /> Create visually appealing user interfaces for websites and applications.`,
-        icon: 'tabler:briefcase',
-      },
-      {
-        title:
-          'Junior Graphic Designer <br /> <span class="font-normal">XYZ Creative Agency, Los Angeles, CA</span> <br /> <span class="text-sm font-normal">2018 - 2021</span>',
-        description: `Assisted senior designers in creating design concepts and visual assets. <br /> Contributed to the development of brand identities and marketing collateral. <br /> Collaborated with the marketing team to ensure consistent design across campaigns. <br /> Gained hands-on experience in various design software and tools.`,
-        icon: 'tabler:briefcase',
-      },
-    ]}
-    classes={{ container: 'max-w-3xl' }}
-  />
+  <!--<Steps-->
+  <!--  id="resume"-->
+  <!--  title="Work experience"-->
+  <!--  items={[-->
+  <!--    {-->
+  <!--      title:-->
+  <!--        'Graphic Designer <br /> <span class="font-normal">ABC Design Studio, New York, NY</span> <br /> <span class="text-sm font-normal">2021 - Present</span>',-->
+  <!--      description: `Collaborate with clients to understand design requirements and objectives. <br /> Develop branding solutions, including logos, color palettes, and brand guidelines. <br /> Design marketing materials such as brochures, posters, and digital assets. <br /> Create visually appealing user interfaces for websites and applications.`,-->
+  <!--      icon: 'tabler:briefcase',-->
+  <!--    },-->
+  <!--    {-->
+  <!--      title:-->
+  <!--        'Junior Graphic Designer <br /> <span class="font-normal">XYZ Creative Agency, Los Angeles, CA</span> <br /> <span class="text-sm font-normal">2018 - 2021</span>',-->
+  <!--      description: `Assisted senior designers in creating design concepts and visual assets. <br /> Contributed to the development of brand identities and marketing collateral. <br /> Collaborated with the marketing team to ensure consistent design across campaigns. <br /> Gained hands-on experience in various design software and tools.`,-->
+  <!--      icon: 'tabler:briefcase',-->
+  <!--    },-->
+  <!--  ]}-->
+  <!--  classes={{ container: 'max-w-3xl' }}-->
+  <!--/>-->
 
   <!-- Steps Widget ****************** -->
 
-  <Steps
-    id="resume2"
-    title="Education"
-    items={[
-      {
-        title: `Master of Fine Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2018 - 2020</span>`,
-        icon: 'tabler:school',
-      },
-      {
-        title: `Bachelor of Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2014 - 2018</span>`,
-        icon: 'tabler:school',
-      },
-    ]}
-    classes={{ container: 'max-w-3xl' }}
-  />
+  <!--<Steps-->
+  <!--  id="resume2"-->
+  <!--  title="Education"-->
+  <!--  items={[-->
+  <!--    {-->
+  <!--      title: `Master of Fine Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2018 - 2020</span>`,-->
+  <!--      icon: 'tabler:school',-->
+  <!--    },-->
+  <!--    {-->
+  <!--      title: `Bachelor of Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2014 - 2018</span>`,-->
+  <!--      icon: 'tabler:school',-->
+  <!--    },-->
+  <!--  ]}-->
+  <!--  classes={{ container: 'max-w-3xl' }}-->
+  <!--/>-->
 
   <!-- Features3 Widget ************** -->
 
