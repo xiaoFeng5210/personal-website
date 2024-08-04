@@ -3,7 +3,7 @@ import { getPermalink, getBlogPermalink} from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Home',
+      text: '主页',
       href: '/',
       // links: [
         // {
@@ -57,37 +57,37 @@ export const headerData = {
     //     },
     //   ],
     // },
+    // {
+    //   text: 'Landing',
+    //   links: [
+    //     {
+    //       text: 'Lead Generation',
+    //       href: getPermalink('/landing/lead-generation'),
+    //     },
+    //     {
+    //       text: 'Long-form Sales',
+    //       href: getPermalink('/landing/sales'),
+    //     },
+    //     {
+    //       text: 'Click-Through',
+    //       href: getPermalink('/landing/click-through'),
+    //     },
+    //     {
+    //       text: 'Product Details (or Services)',
+    //       href: getPermalink('/landing/product'),
+    //     },
+    //     {
+    //       text: 'Coming Soon or Pre-Launch',
+    //       href: getPermalink('/landing/pre-launch'),
+    //     },
+    //     {
+    //       text: 'Subscription',
+    //       href: getPermalink('/landing/subscription'),
+    //     },
+    //   ],
+    // },
     {
-      text: 'Landing',
-      links: [
-        {
-          text: 'Lead Generation',
-          href: getPermalink('/landing/lead-generation'),
-        },
-        {
-          text: 'Long-form Sales',
-          href: getPermalink('/landing/sales'),
-        },
-        {
-          text: 'Click-Through',
-          href: getPermalink('/landing/click-through'),
-        },
-        {
-          text: 'Product Details (or Services)',
-          href: getPermalink('/landing/product'),
-        },
-        {
-          text: 'Coming Soon or Pre-Launch',
-          href: getPermalink('/landing/pre-launch'),
-        },
-        {
-          text: 'Subscription',
-          href: getPermalink('/landing/subscription'),
-        },
-      ],
-    },
-    {
-      text: 'Blog',
+      text: '博客',
       href: getBlogPermalink()
       // links: [
         // {
@@ -113,7 +113,7 @@ export const headerData = {
       // ],
     },
     {
-      text: 'About',
+      text: '关于我',
       href: getPermalink('/about')
     }
     // {

@@ -2,6 +2,7 @@ package test
 
 import (
 	"encoding/json"
+	"fmt"
 	"os"
 	"path/filepath"
 	"strings"
@@ -28,6 +29,50 @@ func loadJson() {
 
 }
 
+func parseMap(mapData map[string]interface{}, stParentDir string) {
+	for k, v := range mapData {
+		switch v.(type) {
+		case string:
+			{
+				path, _ := v.(string)
+				if path == "" {
+					continue
+				}
+				if stParentDir != "" {
+					path = stParentDir + stSeparator + path
+					if k == "text" {
+						stParentDir = path
+					}
+				} else {
+					stParentDir = path
+				}
+
+				createDir(path)
+			}
+
+		case []any:
+			{
+				parseArray(v.([]any), stParentDir)
+			}
+		}
+	}
+}
+
+func parseArray(giJsonData []any, stParentDir string) {
+	for _, v := range giJsonData {
+		mapV, _ := v.(map[string]interface{})
+		parseMap(mapV, stParentDir)
+	}
+}
+
+func createDir(path string) {
+	fmt.Println(path)
+	if path == "" {
+		return
+	}
+}
+
 func TestGenerateDir(t *testing.T) {
 	loadJson()
+	parseMap(iJsonData, "")
 }

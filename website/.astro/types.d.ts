@@ -136,44 +136,30 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"post": {
-"astrowind-template-in-depth.mdx": {
-	id: "astrowind-template-in-depth.mdx";
-  slug: "astrowind-template-in-depth";
-  body: string;
-  collection: "post";
-  data: InferEntrySchema<"post">
-} & { render(): Render[".mdx"] };
-"get-started-website-with-astro-tailwind-css.md": {
-	id: "get-started-website-with-astro-tailwind-css.md";
-  slug: "get-started-website-with-astro-tailwind-css";
+"web中元素的旋转控制点.md": {
+	id: "web中元素的旋转控制点.md";
+  slug: "web中元素的旋转控制点";
   body: string;
   collection: "post";
   data: InferEntrySchema<"post">
 } & { render(): Render[".md"] };
-"how-to-customize-astrowind-to-your-brand.md": {
-	id: "how-to-customize-astrowind-to-your-brand.md";
-  slug: "how-to-customize-astrowind-to-your-brand";
+"web端语音问题.md": {
+	id: "web端语音问题.md";
+  slug: "web端语音问题";
   body: string;
   collection: "post";
   data: InferEntrySchema<"post">
 } & { render(): Render[".md"] };
-"landing.md": {
-	id: "landing.md";
-  slug: "landing";
+"最全面的获取元素宽高及位置的方法.md": {
+	id: "最全面的获取元素宽高及位置的方法.md";
+  slug: "最全面的获取元素宽高及位置的方法";
   body: string;
   collection: "post";
   data: InferEntrySchema<"post">
 } & { render(): Render[".md"] };
-"markdown-elements-demo-post.mdx": {
-	id: "markdown-elements-demo-post.mdx";
-  slug: "markdown-elements-demo-post";
-  body: string;
-  collection: "post";
-  data: InferEntrySchema<"post">
-} & { render(): Render[".mdx"] };
-"useful-resources-to-create-websites.md": {
-	id: "useful-resources-to-create-websites.md";
-  slug: "useful-resources-to-create-websites";
+"用户体验设计法则.md": {
+	id: "用户体验设计法则.md";
+  slug: "用户体验设计法则";
   body: string;
   collection: "post";
   data: InferEntrySchema<"post">
